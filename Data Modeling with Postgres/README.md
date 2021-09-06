@@ -15,6 +15,13 @@ The project consists of the following files:<br />
 [sql_queries.py](sql_queries) contains the sql queries.<br /> 
 [test.ipynb](test.ipynb) is notebook for testing the etl pipeline. It shows if the ingestion worked.<br /> 
 
+## Setup and run
+1. For this project a Postgres Database is needed. Install a database if non is existent.
+2. Edit the [config.py-file](config.py) to connect with the database.
+3. Run ```python sql_queries.py``` to create the database tables.
+4. Run ```python etl.py``` to run the pipeline.
+
+
 
 ## Database Schema
 ### Fact table

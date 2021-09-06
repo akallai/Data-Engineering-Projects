@@ -1,4 +1,5 @@
 import psycopg2
+from config import postgres
 from sql_queries import create_table_queries, drop_table_queries
 
 
@@ -9,7 +10,7 @@ def create_database():
     """
     
     # connect to default database
-    conn = psycopg2.connect("host=127.0.0.1 dbname=studentdb user=postgres password=admin")
+    conn = psycopg2.connect(f"host={postgres['host']} dbname={postgres['defaultdb']} user={postgres['username']} password={postgres['password']}")
     conn.set_session(autocommit=True)
     cur = conn.cursor()
     
@@ -21,7 +22,7 @@ def create_database():
     conn.close()    
     
     # connect to sparkify database
-    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=postgres password=admin")
+    conn = psycopg2.connect(f"host={postgres['host']} dbname={postgres['dbname']} user={postgres['username']} password={postgres['password']}")
     cur = conn.cursor()
     
     return cur, conn

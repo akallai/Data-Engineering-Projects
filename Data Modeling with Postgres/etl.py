@@ -3,6 +3,7 @@ import glob
 import psycopg2
 import pandas as pd
 from sql_queries import *
+from config import postgres
 
 def insertDataframe(cur, insertquery, dataframe):
     """Inserts a dataframe to a database
@@ -114,7 +115,7 @@ def process_data(cur, conn, filepath, func):
 
 
 def main():
-    conn = psycopg2.connect("host=127.0.0.1 dbname=sparkifydb user=postgres password=admin")
+    conn = psycopg2.connect(f"host={postgres['host']} dbname={postgres['dbname']} user={postgres['username']} password={postgres['password']}")
     cur = conn.cursor()
 
     process_data(cur, conn, filepath='data/song_data', func=process_song_file)

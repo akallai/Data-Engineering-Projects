@@ -8,12 +8,12 @@ They'd like a data engineer to create a Postgres database with tables designed t
 
 ## Files 
 
-The project consists of the following files:
-[create_tables.py](create_tables.py) is (re)creating the database for setup and testing purposes. 
-[etl.ipynb](etl.ipynb) is a notebook for thesting and developing the etl-pipeline. 
-[etl.py](etl.py)  is the pipeline script. It iterates over all data files and ingests it into the database **star schema**.
-[sql_queries.py](sql_queries) contains the sql queries.
-[test.ipynb](test.ipynb) is notebook for testing the etl pipeline. It shows if the ingestion worked. 
+The project consists of the following files:<br /> 
+[create_tables.py](create_tables.py) is (re)creating the database for setup and testing purposes.<br />  
+[etl.ipynb](etl.ipynb) is a notebook for thesting and developing the etl-pipeline. <br /> 
+[etl.py](etl.py)  is the pipeline script. It iterates over all data files and ingests it into the database **star schema**.<br /> 
+[sql_queries.py](sql_queries) contains the sql queries.<br /> 
+[test.ipynb](test.ipynb) is notebook for testing the etl pipeline. It shows if the ingestion worked.<br /> 
 
 
 ## Database Schema

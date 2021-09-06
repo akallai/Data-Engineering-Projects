@@ -9,6 +9,7 @@ They'd like a data engineer to create a Postgres database with tables designed t
 ## Files 
 
 The project consists of the following files:<br /> 
+[config.py](config.py) is the configfile which contains connection details to the database. <br /> 
 [create_tables.py](create_tables.py) is (re)creating the database for setup and testing purposes.<br />  
 [etl.ipynb](etl.ipynb) is a notebook for thesting and developing the etl-pipeline. <br /> 
 [etl.py](etl.py)  is the pipeline script. It iterates over all data files and ingests it into the database **star schema**.<br /> 
